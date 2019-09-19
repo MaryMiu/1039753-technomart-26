@@ -69,9 +69,25 @@
         <aside class="column">
           <section class="filters">
             <h2 class="visually-hidden">Фильтры</h2>
-
-
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset>
+                <legend class="visually-hidden">Цена</legend>
+                <div class="filter-range">
+                  <button type="button" class="range-button range-min-button">Минимальная цена</button>
+                  <button type="button" class="range-button range-max-button">Максимальная цена</button>
+                  <div class="filter-line"></div>
+                </div>
+                <div class="filter-prices">
+                  <div class="filter-price">
+                    <label class="visually-hidden" for="filter-min">Минимальная цена:</label>
+                    <input name="min" id="filter-min" type="number" min="0" max="50000">
+                  </div>
+                  <div class="filter-price">
+                    <label class="visually-hidden" for="filter-max">Максимальная цена:</label>
+                    <input name="max" id="filter-max" type="number" min="0" max="50000">
+                  </div>
+                </div>
+              </fieldset>
               <fieldset>
                 <legend>Производители</legend>
                 <ul>
@@ -111,11 +127,17 @@
         <div class="content">
           <section class="sorting">
             <h2 class="visually-hidden">Сортировка</h2>
-            <ul>
-              <li class="sort-option"><a href="#">ПО ЦЕНЕ</a></li>
-              <li class="sort-option"><a href="#">ПО ТИПУ</a></li>
-              <li class="sort-option"><a href="#"></a></li>
-            </ul>
+            <form class="sort" action="https://echo.htmlacademy.ru" method="get">
+              <ul class="sort-list">
+                <li class="sort-option"><button class="sort-button" type="button">По цене</button></li>
+                <li class="sort-option"><button class="sort-button" type="button">По типу</button></li>
+                <li class="sort-option"><button class="sort-button" type="button">По функционалу</button></li>
+                <li class="compare-option"><button class="compare-button compare-up-button" type="button">По возрастанию
+                    цены</button></li>
+                <li class="compare-option"><button class="compare-button compare-down-button" type="button">По убыванию
+                    цены</button></li>
+              </ul>
+            </form>
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Список перфораторов</h2>
