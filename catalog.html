@@ -15,7 +15,10 @@
         <a href="index.html">
           <img src="img/logo.svg" width="109" height="19" alt="Логотип компании «Техномарт»">
         </a>
-        <!-- Здесь будет форма поиска -->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="search-user-query">Поле поиска:</label>
+          <input name="user-query" id="search-user-query" type="text" placeholder="Поиск">
+        </form>
         <a class="favorite-button" href="#">Закладки: 0</a>
         <a class="cart-button cart-button-current" href="#">Корзина: 10</a>
         <a class="order-button" href="#">Оформить заказ</a>
@@ -66,32 +69,37 @@
         <aside class="column">
           <section class="filters">
             <h2 class="visually-hidden">Фильтры</h2>
-            
+
 
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
               <fieldset>
                 <legend>Производители</legend>
                 <ul>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                      name="bosch" id="filter-bosch" checked><label
-                      for="filter-bosch">Bosch</label></li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                      name="interskol" id="filter-interskol"><label for="filter-interskol">Интерскол</label></li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                      name="makita" id="filter-makita" checked><label for="filter-makita">Makita</label></li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                      name="dewalt" id="filter-dewalt"><label for="filter-dewalt">Dewalt</label></li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-                      name="hitachi" id="filter-hitachi"><label for="filter-hitachi">MHitachi</label></li>
+                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                      type="checkbox" name="bosch" id="filter-bosch" checked><label for="filter-bosch">Bosch</label>
+                  </li>
+                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                      type="checkbox" name="interskol" id="filter-interskol"><label
+                      for="filter-interskol">Интерскол</label></li>
+                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                      type="checkbox" name="makita" id="filter-makita" checked><label for="filter-makita">Makita</label>
+                  </li>
+                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                      type="checkbox" name="dewalt" id="filter-dewalt"><label for="filter-dewalt">Dewalt</label></li>
+                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                      type="checkbox" name="hitachi" id="filter-hitachi"><label for="filter-hitachi">MHitachi</label>
+                  </li>
                 </ul>
               </fieldset>
               <fieldset>
                 <legend>Питание:</legend>
                 <ul>
                   <li class="filter-option"><input class="visually-hidden filter-input filter-input-radio" type="radio"
-                      name="product-group" id="filter-rechargeable" value="rechargeable" checked><label for="filter-rechargeable">Аккумуляторные</label></li>
+                      name="product-group" id="filter-rechargeable" value="rechargeable" checked><label
+                      for="filter-rechargeable">Аккумуляторные</label></li>
                   <li class="filter-option"><input class="visually-hidden filter-input filter-input-radio" type="radio"
-                      name="product-group" id="filter-network" value="network"><label for="filter-network">Сетевые</label>
+                      name="product-group" id="filter-network" value="network"><label
+                      for="filter-network">Сетевые</label>
                   </li>
                 </ul>
               </fieldset>
@@ -103,7 +111,11 @@
         <div class="content">
           <section class="sorting">
             <h2 class="visually-hidden">Сортировка</h2>
-            <!-- Здесь будет форма -->
+            <ul>
+              <li class="sort-option"><a href="#">ПО ЦЕНЕ</a></li>
+              <li class="sort-option"><a href="#">ПО ТИПУ</a></li>
+              <li class="sort-option"><a href="#"></a></li>
+            </ul>
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Список перфораторов</h2>
@@ -314,7 +326,7 @@
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
           шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
           совмещены отбойный молоток и ударная дрель.</p>
-        </div>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
