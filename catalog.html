@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Техномарт Каталог</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&display=swap&subset=cyrillic"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,7 +17,7 @@
   <header class="main-header">
     <div class="header-top">
       <div class="container">
-        <a href="index.html">
+        <a class="logo" href="index.html">
           <img src="img/logo.svg" width="109" height="19" alt="Логотип компании «Техномарт»">
         </a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -71,10 +73,10 @@
       <div class="main">
         <aside class="column">
           <section class="filters">
-            <h2 class="visually-hidden">Фильтры</h2>
+            <h2>Фильтр:</h2>
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
               <fieldset>
-                <legend class="visually-hidden">Цена</legend>
+                <legend>Цена:</legend>
                 <div class="filter-range">
                   <button type="button" class="range-button range-min-button">Минимальная цена</button>
                   <button type="button" class="range-button range-max-button">Максимальная цена</button>
@@ -92,7 +94,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <legend>Производители</legend>
+                <legend>Производители:</legend>
                 <ul>
                   <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
                       type="checkbox" name="bosch" id="filter-bosch" checked><label for="filter-bosch">Bosch</label>
@@ -129,7 +131,7 @@
         </aside>
         <div class="content">
           <section class="sorting">
-            <h2 class="visually-hidden">Сортировка</h2>
+            <h2>Сортировка:</h2>
             <form class="sort" action="https://echo.htmlacademy.ru" method="get">
               <ul class="sort-list">
                 <li class="sort-option"><button class="sort-button" type="button">По цене</button></li>
@@ -381,9 +383,21 @@
         <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
           Все права защищены</p>
         <ul class="footer-social">
-          <li><a class="social-button" href="#">Vkontakte</a></li>
-          <li><a class="social-button" href="#">Facebook</a></li>
-          <li><a class="social-button" href="#">Instagram</a></li>
+          <li>
+            <a class="social-button social-button-vk" href="#">
+              <span class="visually-hidden">Vkontakte</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button social-button-fb" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button social-button-in" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
         </ul>
         <p class="footer-mail">Обратная связь:<br>
           <a href="#">mail@htmlacademy.ru</a>
