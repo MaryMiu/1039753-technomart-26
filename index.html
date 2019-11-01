@@ -81,18 +81,11 @@
             <h3>Техника</h3>
             <a class="read-more" href="#">Для стройки</a>
           </div>
-          <div class="item item-discounts">
-            <h3>Скидки 50%</h3>
-            <a class="read-more" href="#">На 350 товаров</a>
-          </div>
-          <div class="item item-delivery">
-            <h3>Доставка</h3>
-            <a class="read-more" href="#">Бесплатно</a>
-          </div>
           <div class="item slider">
             <h3 class="visually-hidden">Слайдер</h3>
+            <div class="slider-wrapper"></div>
             <div class="slider-container">
-              <div class="slider-item">
+              <div class="slider-item active">
                 <figure>
                   <img src="img/slide-1.jpg" width="620" height="266" alt="Дрели соседям на радость!">
                   <figcaption><span>Перфораторы</span><br>Настоящие мужские игрушки</figcaption>
@@ -106,11 +99,17 @@
                 </figure>
                 <a class="button" href="catalog.html">Открыть каталог</a>
               </div>
-              <div class="slider-buttons">
-                <button class="button-back" type="button">Назад</button>
-                <button class="button-next" type="button">Вперед</button>
-              </div>
+              <button class="slider-button button-back" type="button">Назад</button>
+              <button class="slider-button button-next" type="button">Вперед</button>
             </div>
+          </div>
+          <div class="item item-discounts">
+            <h3>Скидки 50%</h3>
+            <a class="read-more" href="#">На 350 товаров</a>
+          </div>
+          <div class="item item-delivery">
+            <h3>Доставка</h3>
+            <a class="read-more" href="#">Бесплатно</a>
           </div>
         </div>
       </div>
@@ -122,7 +121,9 @@
           <a class="button" href="#">Все популярные товары</a>
         </div>
         <ul class="catalog-list">
+
           <li class="catalog-item">
+            <div class="flag flag-new">новинка</div>
             <a href="#">
               <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
@@ -141,6 +142,7 @@
               <button class="catalog-button catalog-favorite-button" type="button">В закладки</button>
             </div>
           </li>
+
           <li class="catalog-item">
             <a href="#">
               <h3>
@@ -251,7 +253,7 @@
             равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
             Техномарт работает со многими транспортными компаниями:</p>
-          <ul>
+          <ul class="transport-list">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
@@ -262,7 +264,7 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами,<br>
             заехав в наш офис:</p>
-          <img src="img/map.png" width="300" height="150" alt="Карта проезда">
+          <img class="map-image" src="img/map.png" width="300" height="150" alt="Карта проезда">
           <button class="button" type="button">Заблудились? Напишите нам!</button>
         </section>
       </div>
@@ -271,23 +273,30 @@
   <footer class="main-footer">
     <div class="footer-top">
       <div class="container">
-        <a class="footer-logo" href="#"><img src="img/logo.svg" width="138" height="23"
-            alt="Логотип компании «Техномарт»"></a>
-        <ul class="footer-nav">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-          +7 (812) 555-05-55</p>
-        <ul class="footer-menu">
-          <li><a href="#">Материалы</a></li>
-          <li><a href="#">Техника</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-        </ul>
+
+        <div class="footer-wrapper">
+          <a class="footer-logo" href="#"><img src="img/logo.svg" width="138" height="23"
+              alt="Логотип компании «Техномарт»"></a>
+          <ul class="footer-nav">
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-wrapper">
+          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+            +7 (812) 555-05-55</p>
+          <ul class="footer-menu">
+            <li><a href="#">Материалы</a></li>
+            <li><a href="#">Техника</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
     <div class="footer-bottom">
@@ -314,7 +323,7 @@
         <p class="footer-mail">Обратная связь:<br>
           <a href="#">mail@htmlacademy.ru</a>
         </p>
-        <p class="footer-copyright">
+        <p class="footer-develop">
           Разработано:<br>
           <a href="https://htmlacademy.ru/">html academy</a>
         </p>
