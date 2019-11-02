@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Техномарт</title>
   <link
-    href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,700&display=swap&subset=cyrillic"
+    href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7CPT+Sans:400,700&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -83,7 +83,6 @@
           </div>
           <div class="item slider">
             <h3 class="visually-hidden">Слайдер</h3>
-            <div class="slider-wrapper"></div>
             <div class="slider-container">
               <div class="slider-item active">
                 <figure>
@@ -103,13 +102,15 @@
               <button class="slider-button button-next" type="button">Вперед</button>
             </div>
           </div>
-          <div class="item item-discounts">
-            <h3>Скидки 50%</h3>
-            <a class="read-more" href="#">На 350 товаров</a>
-          </div>
-          <div class="item item-delivery">
-            <h3>Доставка</h3>
-            <a class="read-more" href="#">Бесплатно</a>
+          <div class="item-column">
+            <div class="item item-discounts">
+              <h3>Скидки 50%</h3>
+              <a class="read-more" href="#">На 350 товаров</a>
+            </div>
+            <div class="item item-delivery">
+              <h3>Доставка</h3>
+              <a class="read-more" href="#">Бесплатно</a>
+            </div>
           </div>
         </div>
       </div>
@@ -270,13 +271,16 @@
       </div>
     </div>
   </main>
+
   <footer class="main-footer">
     <div class="footer-top">
       <div class="container">
 
         <div class="footer-wrapper">
-          <a class="footer-logo" href="#"><img src="img/logo.svg" width="138" height="23"
-              alt="Логотип компании «Техномарт»"></a>
+          <p class="footer-image">
+            <a class="footer-logo" href="#"><img src="img/logo.svg" width="138" height="23"
+                alt="Логотип компании «Техномарт»"></a>
+          </p>
           <ul class="footer-nav">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
@@ -325,35 +329,41 @@
         </p>
         <p class="footer-develop">
           Разработано:<br>
-          <a href="https://htmlacademy.ru/">html academy</a>
+          <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
         </p>
       </div>
     </div>
   </footer>
+
   <section class="modal modal-write">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="write-user-name">Ваше имя:</label>
-        <input name="user-name" id="write-user-name" type="text" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="write-user-email">Ваш e-mail:</label>
-        <input name="user-email" id="write-user-email" type="text" placeholder="email@example.com">
-      </p>
+      <div class="input-group">
+        <p>
+          <label for="write-user-name">Ваше имя:</label>
+          <input name="user-name" id="write-user-name" type="text" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-user-email">Ваш e-mail:</label>
+          <input name="user-email" id="write-user-email" type="email" placeholder="email@example.com">
+        </p>
+      </div>
       <p>
         <label for="write-user-text">Текст письма:</label>
-        <textarea name="user-text" id="write-user-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <textarea name="user-text" id="write-user-text" cols="30" rows="4" placeholder="В свободной форме"></textarea>
       </p>
       <button class="button" type="submit">Отправить</button>
-      <button class="button-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </form>
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+      width="940" height="447" allowfullscreen></iframe>
     <p><img src="img/map-large.png" width="940" height="447"
         alt="Офис компании по адресу ул.Большая Конюшенная 19/8, Санкт-Петербург"></p>
-    <button class="button-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 </body>
 

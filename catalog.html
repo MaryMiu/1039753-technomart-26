@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="inner-page">
   <header class="main-header">
     <div class="header-top">
       <div class="container">
@@ -23,10 +23,16 @@
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="search-user-query">Поле поиска:</label>
           <input name="user-query" id="search-user-query" type="text" placeholder="Поиск">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+            <path fill="#ffffff"
+              d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+          </svg>
         </form>
-        <a class="favorite-button" href="#">Закладки: 0</a>
-        <a class="cart-button cart-button-current" href="#">Корзина: 10</a>
-        <a class="order-button" href="#">Оформить заказ</a>
+        <ul class="header-navigation">
+          <li><a class="favorite-button" href="#">Закладки: 0</a></li>
+          <li><a class="cart-button cart-button-active" href="#">Корзина: 0</a></li>
+          <li><a class="order-button" href="#">Оформить заказ</a></li>
+        </ul>
       </div>
     </div>
     <div class="header-inner">
@@ -41,7 +47,7 @@
           </div>
           <ul class="user-navigation">
             <li class="logout-link"><a href="#">Равшан Джамшутович</a>
-              <ul>
+              <ul class="user-subnavigation">
                 <li class="order-link"><a href="#">Мои заказы</a></li>
                 <li class="profile-link"><a href="#">Личный кабинет</a></li>
               </ul>
@@ -65,83 +71,88 @@
   <main>
     <div class="container">
       <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
-      <h1>Перфораторы</h1>
+      <div class="page-header">
+        <h1>Перфораторы</h1>
+      </div>
       <div class="main">
-        <aside class="column">
-          <section class="filters">
-            <h2>Фильтр:</h2>
-            <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset>
-                <legend>Цена:</legend>
-                <div class="filter-range">
-                  <button type="button" class="range-button range-min-button">Минимальная цена</button>
-                  <button type="button" class="range-button range-max-button">Максимальная цена</button>
-                  <div class="filter-line"></div>
+        <section class="filters">
+          <h2>Фильтр:</h2>
+          <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset>
+              <legend>Цена:</legend>
+              <div class="filter-range">
+                <div class="scale">
+                  <div class="bar" style="margin-left: 9%;width: 76%;"></div>
                 </div>
-                <div class="filter-prices">
-                  <div class="filter-price">
-                    <label class="visually-hidden" for="filter-min">Минимальная цена:</label>
-                    <input name="min" id="filter-min" type="number" min="0" max="50000">
-                  </div>
-                  <div class="filter-price">
-                    <label class="visually-hidden" for="filter-max">Максимальная цена:</label>
-                    <input name="max" id="filter-max" type="number" min="0" max="50000">
-                  </div>
+                <button type="button" class="range-button range-min-button">Минимальная цена</button>
+                <button type="button" class="range-button range-max-button">Максимальная цена</button>
+              </div>
+              <div class="filter-prices">
+                <div class="filter-price">
+                  <label class="visually-hidden" for="filter-min">Минимальная цена:</label>
+                  <input name="min" id="filter-min" type="number" value="0" min="0" max="50000">
                 </div>
-              </fieldset>
-              <fieldset>
-                <legend>Производители:</legend>
-                <ul>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
-                      type="checkbox" name="bosch" id="filter-bosch" checked><label for="filter-bosch">Bosch</label>
-                  </li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
-                      type="checkbox" name="interskol" id="filter-interskol"><label
-                      for="filter-interskol">Интерскол</label></li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
-                      type="checkbox" name="makita" id="filter-makita" checked><label for="filter-makita">Makita</label>
-                  </li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
-                      type="checkbox" name="dewalt" id="filter-dewalt"><label for="filter-dewalt">Dewalt</label></li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
-                      type="checkbox" name="hitachi" id="filter-hitachi"><label for="filter-hitachi">MHitachi</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset>
-                <legend>Питание:</legend>
-                <ul>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-radio" type="radio"
-                      name="product-group" id="filter-rechargeable" value="rechargeable" checked><label
-                      for="filter-rechargeable">Аккумуляторные</label></li>
-                  <li class="filter-option"><input class="visually-hidden filter-input filter-input-radio" type="radio"
-                      name="product-group" id="filter-network" value="network"><label
-                      for="filter-network">Сетевые</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <button type="submit" class="filter-button button">Показать</button>
-            </form>
+                <div class="filter-price">
+                  <label class="visually-hidden" for="filter-max">Максимальная цена:</label>
+                  <input name="max" id="filter-max" type="number" value="30000" min="0" max="50000">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul>
+                <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                    type="checkbox" name="bosch" id="filter-bosch" checked><label for="filter-bosch">Bosch</label>
+                </li>
+                <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                    type="checkbox" name="interskol" id="filter-interskol"><label
+                    for="filter-interskol">Интерскол</label></li>
+                <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                    type="checkbox" name="makita" id="filter-makita" checked><label for="filter-makita">Makita</label>
+                </li>
+                <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                    type="checkbox" name="dewalt" id="filter-dewalt"><label for="filter-dewalt">Dewalt</label></li>
+                <li class="filter-option"><input class="visually-hidden filter-input filter-input-checkbox"
+                    type="checkbox" name="hitachi" id="filter-hitachi"><label for="filter-hitachi">MHitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Питание:</legend>
+              <ul>
+                <li class="filter-option"><input class="visually-hidden filter-input filter-input-radio" type="radio"
+                    name="product-group" id="filter-rechargeable" value="rechargeable" checked><label
+                    for="filter-rechargeable">Аккумуляторные</label></li>
+                <li class="filter-option"><input class="visually-hidden filter-input filter-input-radio" type="radio"
+                    name="product-group" id="filter-network" value="network"><label for="filter-network">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" class="filter-button button">Показать</button>
+          </form>
 
-          </section>
-        </aside>
+        </section>
         <div class="content">
           <section class="sorting">
             <h2>Сортировка:</h2>
             <form class="sort" action="https://echo.htmlacademy.ru" method="get">
-              <ul class="sort-list">
-                <li class="sort-option"><button class="sort-button" type="button">По цене</button></li>
-                <li class="sort-option"><button class="sort-button" type="button">По типу</button></li>
-                <li class="sort-option"><button class="sort-button" type="button">По функционалу</button></li>
-                <li class="compare-option"><button class="compare-button compare-up-button" type="button">По возрастанию
-                    цены</button></li>
-                <li class="compare-option"><button class="compare-button compare-down-button" type="button">По убыванию
-                    цены</button></li>
-              </ul>
+              <div class="sort-list">
+                <div class="sort-option"><button class="sort-button" type="button">По цене</button></div>
+                <div class="sort-option"><button class="sort-button" type="button">По типу</button></div>
+                <div class="sort-option"><button class="sort-button" type="button">По функционалу</button></div>
+              </div>
+              <div class="compare-list">
+                <div class="compare-option"><button class="compare-button compare-up-button" type="button">По
+                    возрастанию
+                    цены</button></div>
+                <div class="compare-option"><button class="compare-button compare-down-button" type="button">По убыванию
+                    цены</button></div>
+              </div>
             </form>
           </section>
           <section class="catalog">
@@ -356,26 +367,36 @@
       </div>
     </section>
   </main>
+
   <footer class="main-footer">
     <div class="footer-top">
       <div class="container">
-        <a class="footer-logo" href="#"><img src="img/logo.svg" width="138" height="23"
-            alt="Логотип компании «Техномарт»"></a>
-        <ul class="footer-nav">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-          +7 (812) 555-05-55</p>
-        <ul class="footer-menu">
-          <li><a href="#">Материалы</a></li>
-          <li><a href="#">Техника</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-        </ul>
+
+        <div class="footer-wrapper">
+          <p class="footer-image">
+            <a class="footer-logo" href="#"><img src="img/logo.svg" width="138" height="23"
+                alt="Логотип компании «Техномарт»"></a>
+          </p>
+          <ul class="footer-nav">
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-wrapper">
+          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+            +7 (812) 555-05-55</p>
+          <ul class="footer-menu">
+            <li><a href="#">Материалы</a></li>
+            <li><a href="#">Техника</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
     <div class="footer-bottom">
@@ -402,20 +423,21 @@
         <p class="footer-mail">Обратная связь:<br>
           <a href="#">mail@htmlacademy.ru</a>
         </p>
-        <p class="footer-copyright">
-          Разработано:
-          <a class="button" href="https://htmlacademy.ru/">html academy</a>
+        <p class="footer-develop">
+          Разработано:<br>
+          <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
         </p>
       </div>
     </div>
   </footer>
+
   <section class="modal modal-cart">
     <h2>Товар добавлен в корзину</h2>
     <div class="cart-buttons">
       <a class="button" href="#">Оформить заказ</a>
-      <button class="button" type="button">Продолжить покупки</button>
+      <button class="button secondary-button" type="button">Продолжить покупки</button>
     </div>
-    <button class="button-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 </body>
 
