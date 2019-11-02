@@ -1312,9 +1312,7 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: 26px;
@@ -1324,7 +1322,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   width: 218px;
   margin-bottom: 20px;
-
+  margin-right: 20px;
   line-height: 20px;
   font-weight: bold;
   text-align: center;
@@ -1867,7 +1865,12 @@ input[type="radio"].visually-hidden {
 .product-list .catalog-list {
   margin-bottom: 0;
 }
-
+.product-list .catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+.content .catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
 /*=====  End of Catalog  ======*/
 
 
