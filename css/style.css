@@ -398,7 +398,7 @@ input[type="radio"].visually-hidden {
 
 .user-navigation .logout-link>a:hover::after {
   background-position: 0 -19px;
-  
+
 }
 
 .user-navigation>li>a:hover:before,
@@ -565,6 +565,12 @@ input[type="radio"].visually-hidden {
   width: 300px;
   height: 125px;
   margin: 0 10px 17px;
+  position: relative;
+}
+
+.item .flag {
+  top: 0;
+  right: 0;
 }
 
 .slider {
@@ -1331,7 +1337,7 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
-.catalog-item .flag {
+.flag {
   position: absolute;
   top: -1px;
   right: -1px;
@@ -1342,7 +1348,7 @@ input[type="radio"].visually-hidden {
   z-index: 20;
 }
 
-.catalog-item .flag-new {
+.flag-new {
   background: url("../img/new.png") no-repeat 0 0;
 }
 
