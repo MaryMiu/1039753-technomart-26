@@ -10,7 +10,7 @@
     href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7CPT+Sans:400,700&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <a class="logo" href="index.html">
           <img src="img/logo.svg" width="109" height="19" alt="Логотип компании «Техномарт»">
         </a>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
           <label class="visually-hidden" for="search-user-query">Поле поиска:</label>
           <input name="user-query" id="search-user-query" type="text" placeholder="Поиск">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
@@ -38,16 +38,16 @@
     <div class="header-inner">
       <div class="container">
         <div class="header-info">
-          <p class="header-text">Интернет-магазин<br>
-            строительных материалов<br>
-            и инструментов для ремонта</p>
+          <p class="header-text">Интернет-магазин
+            строительных материалов
+            и&nbsp;инструментов для ремонта</p>
           <div class="header-contacts">
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
             <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
           <ul class="user-navigation">
-            <li class="login-link"><a class="js-login-link" href="login.html">Войти</a></li>
-            <li class="checkin-link"><a href="#">Регистрация</a></li>
+            <li><a class="login-link" href="login.html">Войти</a></li>
+            <li><a class="checkin-link" href="#">Регистрация</a></li>
           </ul>
         </div>
         <nav class="main-navigation">
@@ -85,20 +85,20 @@
           <div class="item slider">
             <h3 class="visually-hidden">Слайдер</h3>
             <div class="slider-container">
-              <div class="slider-item">
-                <figure>
-                  <img src="img/slide-1.jpg" width="620" height="266" alt="Дрели соседям на радость!">
-                  <figcaption><span>Перфораторы</span><br>Настоящие мужские игрушки</figcaption>
-                </figure>
-                <a class="button" href="catalog.html">Открыть каталог</a>
-              </div>
               <div class="slider-item active">
-                <figure>
-                  <img src="img/slide-2.jpg" width="620" height="266" alt="Дрели соседям на радость!">
-                  <figcaption><span>Дрели</span><br>Соседям на радость!</figcaption>
-                </figure>
+                <h4>Дрели</h4>
+                <p>Соседям на радость!</p>
                 <a class="button" href="catalog.html">Открыть каталог</a>
               </div>
+              <div class="slider-item">
+                <h4>Перфораторы</h4>
+                <p>Настоящие мужские игрушки</p>
+                <a class="button" href="catalog.html">Открыть каталог</a>
+              </div>
+              <ul class="slider-pagination">
+                <li class="pagination-active"><a href="#">Первый</a></li>
+                <li><a href="#">Второй</a></li>
+              </ul>
               <button class="slider-button button-back" type="button">Назад</button>
               <button class="slider-button button-next" type="button">Вперед</button>
             </div>
@@ -224,7 +224,7 @@
       <div class="container">
         <div class="services-description">
           <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами! <br>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
         <div class="services-list">
@@ -240,14 +240,14 @@
             <li class="services-text--car services-text-current">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем, <br>
+                к вашему подъезду совершенно бесплатно!</p>
+              <p>Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </li>
             <li class="services-text--guarantee">
               <h3>Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит,<br>
-                а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей<br>
+                а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей
                 гарантии. Мы обменяем сгоревший товар на новый.<br>
                 Дом уж восстановите как-нибудь сами.</p>
             </li>
@@ -266,7 +266,7 @@
           <h2>Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
             равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          <p class="transport-text">Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:</p>
           <ul class="transport-list">
             <li>Деловые линии</li>
@@ -277,7 +277,7 @@
         </section>
         <section class="map">
           <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами,<br>
+          <p>Вы можете забрать товар сами,
             заехав в наш офис:</p>
           <a class="map-image-link" href="#"><img class="map-image" src="img/map.png" width="300" height="150"
               alt="Карта проезда"></a>
@@ -290,10 +290,8 @@
     <div class="footer-top">
       <div class="container">
         <div class="footer-wrapper">
-          <p class="footer-image">
-            <a class="footer-logo" href="index.html"><img src="img/logo.svg" width="138" height="23"
-                alt="Логотип компании «Техномарт»"></a>
-          </p>
+          <a class="footer-logo" href="index.html"><img src="img/logo-technomart.svg" width="137" height="22"
+              alt="Логотип компании «Техномарт»"></a>
           <ul class="footer-nav">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
@@ -303,8 +301,8 @@
           </ul>
         </div>
         <div class="footer-wrapper">
-          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-            +7 (812) 555-05-55</p>
+          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            <a href="tel:+78125550555"> +7 (812) 555-05-55</a></p>
           <ul class="footer-menu">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
@@ -316,7 +314,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
+        <p class="footer-copyright">© 2010–2019 Компания «Техномарт»
           Все права защищены</p>
         <ul class="footer-social">
           <li>
@@ -335,11 +333,11 @@
             </a>
           </li>
         </ul>
-        <p class="footer-mail">Обратная связь:<br>
+        <p class="footer-mail">Обратная связь:
           <a href="#">mail@htmlacademy.ru</a>
         </p>
         <p class="footer-develop">
-          Разработано:<br>
+          Разработано:
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
@@ -348,22 +346,26 @@
   <section class="modal modal-write">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="input-group">
+      <div class="modal-body">
+        <div class="input-group">
+          <p>
+            <label for="write-user-name">Ваше имя:</label>
+            <input class="js-user-name" name="user-name" id="write-user-name" type="text" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="write-user-email">Ваш e-mail:</label>
+            <input class="js-user-email" name="user-email" id="write-user-email" type="email"
+              placeholder="email@example.com">
+          </p>
+        </div>
         <p>
-          <label for="write-user-name">Ваше имя:</label>
-          <input class="js-user-name" name="user-name" id="write-user-name" type="text" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="write-user-email">Ваш e-mail:</label>
-          <input class="js-user-email" name="user-email" id="write-user-email" type="email"
-            placeholder="email@example.com">
+          <label for="write-user-text">Текст письма:</label>
+          <textarea name="user-text" id="write-user-text" cols="30" rows="4" placeholder="В свободной форме"></textarea>
         </p>
       </div>
-      <p>
-        <label for="write-user-text">Текст письма:</label>
-        <textarea name="user-text" id="write-user-text" cols="30" rows="4" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button" type="submit">Отправить</button>
+      <div class="modal-footer">
+        <button class="button" type="submit">Отправить</button>
+      </div>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </form>
   </section>

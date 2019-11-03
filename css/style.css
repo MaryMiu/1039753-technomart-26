@@ -23,22 +23,6 @@ a {
   text-decoration: none;
 }
 
-h2,
-h2 * {
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
-  color: #32425c;
-  font-size: 30px;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-
-h3,
-h3 * {
-  color: #000000;
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-}
 
 img {
   max-width: 100%;
@@ -78,7 +62,7 @@ input[type="radio"].visually-hidden {
 =            Header            =
 =============================================*/
 .main-header {
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   margin-bottom: 60px;
 }
 
@@ -154,7 +138,7 @@ input[type="radio"].visually-hidden {
 .order-button {
   color: #ffffff;
   font-size: 17px;
-  padding: 9px 20px;
+  padding: 9px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -163,9 +147,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .favorite-button,
@@ -237,6 +218,9 @@ input[type="radio"].visually-hidden {
 
 .order-button {
   background-color: #63a63e;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .order-button:hover {
@@ -262,7 +246,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 33px 0 15px;
+  padding: 47px 0 27px;
 }
 
 .header-text {
@@ -270,16 +254,18 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
-  margin-left: 53px;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 267px;
-  flex: 0 0 267px;
+  width: 320px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: 50px;
+  padding-left: 53px;
+  margin: 0;
 }
 
 .header-contacts {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 270px;
-  flex: 0 0 270px;
+  width: 270px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .header-contacts a {
@@ -287,7 +273,7 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   letter-spacing: 0.42px;
   border: 3px solid #ffffff;
-  background-image: url(../img/icon-phone.svg);
+  background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 11px center;
   display: block;
@@ -319,48 +305,64 @@ input[type="radio"].visually-hidden {
   align-self: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: 12px;
 }
 
 .user-navigation>li+li {
   margin-left: 10px;
 }
 
-.user-navigation>li>a {
+.login-link,
+.checkin-link,
+.profile-link,
+.logout-link {
   color: #000000;
   font-size: 21px;
   background-color: #fff;
-  padding: 10px 25px;
   display: block;
   position: relative;
 }
 
-.user-navigation a:hover {
+.user-navigation-group {
+  display: flex;
+}
+
+.login-link {
+  position: relative;
+  padding: 10px 25px 10px 48px;
+}
+
+.checkin-link {
+  padding: 10px 25px;
+}
+
+.profile-link {
+  padding: 10px 0 10px 47px;
+  padding-left: 47px;
+}
+
+.logout-link {
+  text-indent: -9999px;
+  padding: 10px 68px 10px 0px;
+}
+
+.profile-link:hover {
+  color: #000;
+}
+
+.login-link:hover,
+.checkin-link:hover {
   color: #ee3643;
 }
 
-.user-navigation a:active {
-  color: inherit;
-  opacity: 0.3;
+.login-link:active,
+.checkin-link:active,
+.profile-link:active {
+  color: #b2b2b2;
 }
 
-.user-navigation .login-link>a {
-  position: relative;
-  padding-left: 48px;
-}
-
-.user-navigation .logout-link>a {
-  padding-left: 47px;
-  padding-right: 68px;
-}
-
-.user-navigation .logout-link>a:hover {
-  color: inherit;
-}
-
-.user-navigation .login-link>a::before,
-.user-navigation .logout-link>a::before,
-.user-navigation .logout-link>a::after {
+.login-link::before,
+.profile-link::before,
+.logout-link::before {
   content: "";
   background-image: url("../img/sprite.svg");
   background-repeat: no-repeat;
@@ -372,45 +374,39 @@ input[type="radio"].visually-hidden {
   height: 17px;
 }
 
-.user-navigation .login-link>a:before {
+.login-link:before,
+.login-link:active::before,
+.login-link:active:hover::before {
   background-position: -41px -1px;
 }
 
-.user-navigation .login-link>a:hover::before {
+.login-link:hover::before {
   background-position: -41px -19px;
 
 }
 
-.user-navigation .logout-link>a::before {
+.profile-link::before,
+.profile-link:active::before,
+.profile-link:active:hover::before {
   background-position: -21px 0;
   height: 18px;
 }
 
-.user-navigation .logout-link>a:hover::before {
+.profile-link:hover::before {
   background-position: -21px -18px;
 }
 
-.user-navigation .logout-link>a::after {
+.logout-link::before,
+.logout-link:active::before,
+.logout-link:active:hover::before {
   background-position: 0 -1px;
   left: auto;
   right: 10px;
 }
 
-.user-navigation .logout-link>a:hover::after {
+.logout-link:hover::before {
   background-position: 0 -19px;
 
-}
-
-.user-navigation>li>a:hover:before,
-.user-navigation>li>a:hover::after {
-  opacity: 1;
-}
-
-.user-navigation ul a {
-  color: #32425c;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
-  text-decoration: underline;
 }
 
 .user-subnavigation {
@@ -448,10 +444,24 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
+.user-subnavigation a {
+  color: #32425c;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.user-subnavigation a:hover {
+  color: #ee3643;
+}
+
+.user-subnavigation a:active {
+  color: #b2b2b2;
+}
+
 .main-navigation {
   -webkit-box-shadow: inset 0 -5px 0 #293449;
   box-shadow: inset 0 -5px 0 #293449;
-  /* ? */
   background-color: #32425c;
 }
 
@@ -480,7 +490,6 @@ input[type="radio"].visually-hidden {
 
 .main-navigation a:active {
   opacity: 0.5;
-  /* ? */
 }
 
 .search-form {
@@ -489,7 +498,7 @@ input[type="radio"].visually-hidden {
 
 .search-form input[type="text"] {
   color: #000000;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 17px;
   background-color: transparent;
   border: none;
@@ -541,9 +550,6 @@ input[type="radio"].visually-hidden {
   color: #fff;
 }
 
-
-
-
 /*=====  End of Header  ======*/
 
 
@@ -581,7 +587,7 @@ input[type="radio"].visually-hidden {
 
 .item h3 {
   color: #ffffff;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -629,7 +635,7 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   line-height: 18px;
   width: 135px;
   display: block;
@@ -659,39 +665,53 @@ input[type="radio"].visually-hidden {
 .slider-item {
   position: relative;
   display: none;
+  width: 620px;
+  height: 266px;
+  padding: 26px 23px 0;
 }
 
 .slider-item.active {
   display: block;
 }
 
-.slider-item figure {
-  background-color: #000;
-  position: relative;
-  margin: 0;
-  height: 266px;
+.slider-item:nth-child(1) {
+  background-image: url("../img/slide-2.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #5F443B;
 }
 
-.slider-item figcaption {
-  color: #ffffff;
-  font-size: 18px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
-  padding: 31px 25px;
+.slider-item:nth-child(2) {
+  background-image: url("../img/slide-1.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #C4AE97;
 }
 
-.slider-item figcaption span {
+.slider-item h4 {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.slider-item p {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
 }
 
 .slider-item .button {
   position: absolute;
   top: 208px;
   left: 26px;
+  z-index: 2;
 }
 
 .slider-button {
@@ -717,6 +737,40 @@ input[type="radio"].visually-hidden {
   right: 26px;
 }
 
+.slider-pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  bottom: 34px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider-pagination li {
+  margin-right: 10px;
+}
+
+.slider-pagination li:last-child {
+  margin-right: 0;
+}
+
+.slider-pagination a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #ee3643;
+  text-indent: -9999px;
+}
+
+.pagination-active a {
+  background-color: #fff;
+}
+
 /*=====  End of Slider  ======*/
 
 
@@ -727,7 +781,7 @@ input[type="radio"].visually-hidden {
 =============================================*/
 
 .button {
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   background-color: #ee3643;
   color: #ffffff;
   font-size: 14px;
@@ -774,6 +828,11 @@ input[type="radio"].visually-hidden {
 }
 
 .page-header h2 {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  color: #32425c;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
   margin: 0;
 }
 
@@ -849,7 +908,21 @@ input[type="radio"].visually-hidden {
 =            Services section            =
 =============================================*/
 .services {
-  padding: 68px 0;
+  padding: 94px 0 68px;
+}
+
+.services-description {
+  width: 400px;
+}
+
+.services-description h2 {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  color: #32425c;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 27px;
 }
 
 .services-text {
@@ -857,12 +930,18 @@ input[type="radio"].visually-hidden {
 }
 
 .services-text h2 {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  color: #32425c;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
 .services-text p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .services-list {
@@ -890,7 +969,7 @@ input[type="radio"].visually-hidden {
 .services-menu a {
   color: #ffffff;
   background-color: #32425c;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 21px;
   font-weight: 700;
   line-height: 30px;
@@ -927,7 +1006,7 @@ input[type="radio"].visually-hidden {
 .services-text li {
   position: relative;
   padding-left: 80px;
-  padding-right: 240px;
+  padding-right: 242px;
   padding-top: 19px;
   padding-bottom: 19px;
   min-height: 274px;
@@ -975,7 +1054,7 @@ input[type="radio"].visually-hidden {
 
 .services-text h3 {
   color: #32425c;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -1015,6 +1094,11 @@ input[type="radio"].visually-hidden {
 }
 
 .index-columns h2 {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  color: #32425c;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
   margin: 0;
   margin-bottom: 30px;
 }
@@ -1033,6 +1117,10 @@ input[type="radio"].visually-hidden {
   padding-left: 40px;
 }
 
+.transport-text {
+  width: 400px;
+}
+
 .transport-list {
   list-style: none;
   padding: 0;
@@ -1041,7 +1129,7 @@ input[type="radio"].visually-hidden {
 }
 
 .transport-list li {
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
@@ -1066,6 +1154,10 @@ input[type="radio"].visually-hidden {
   width: 300px;
 }
 
+.map p {
+  width: 200px;
+}
+
 .map-image-link {
   display: block;
   margin-bottom: 38px;
@@ -1084,7 +1176,7 @@ input[type="radio"].visually-hidden {
 =============================================*/
 .main-footer {
   background-color: #32425c;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
 }
 
 .footer-top {
@@ -1112,7 +1204,6 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.footer-image,
 .footer-contacts,
 .footer-copyright {
   width: 390px;
@@ -1120,9 +1211,6 @@ input[type="radio"].visually-hidden {
   flex-shrink: 0;
 }
 
-.footer-image {
-  margin: 0;
-}
 
 .footer-logo {
   -webkit-box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
@@ -1159,36 +1247,37 @@ input[type="radio"].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .footer-nav {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
   padding-top: 15px;
+  width: 548px;
+  align-self: flex-end;
+}
+
+.footer-menu {
+  width: 525px;
 }
 
 .footer-nav a,
 .footer-menu a {
   font-size: 18px;
-  border-bottom: 1px solid transparent;
 }
 
 .footer-nav li:hover a,
 .footer-menu li:hover a {
-  border-bottom-color: inherit;
+  text-decoration: underline;
 }
 
 .footer-nav li:active a,
 .footer-menu li:active a {
   opacity: 0.5;
-  border-bottom-color: transparent;
+  text-decoration: none;
 }
 
 .footer-nav li {
-  margin-left: 59px;
+  margin-left: 15px;
 }
 
 .footer-nav li:first-child {
@@ -1201,7 +1290,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-menu li {
-  margin-left: 60px;
+  margin-left: 15px;
 }
 
 .footer-menu li:first-child {
@@ -1218,21 +1307,33 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
+.footer-contacts a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-copyright {
+  padding-right: 148px;
+}
+
 .footer-social {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 132px;
-  margin: 0;
+}
+
+.footer-social li {
+  margin-left: 2px;
+}
+
+.footer-social li:first-child {
+  margin-left: 0;
 }
 
 .social-button {
@@ -1283,18 +1384,17 @@ input[type="radio"].visually-hidden {
 .footer-mail a,
 .footer-develop a {
   color: #ffd180;
+  display: block;
 }
 
-.footer-mail a {
-  border-bottom: 1px solid transparent;
+.footer-mail a:hover,
+.footer-develop a:hover {
+  text-decoration: underline;
 }
 
-.footer-mail a:hover {
-  border-bottom-color: inherit;
-}
-
-.footer-mail a:active {
-  border-bottom-color: transparent;
+.footer-mail a:active,
+.footer-develop a:active {
+  text-decoration: none;
   color: #ee3643;
 }
 
@@ -1403,6 +1503,10 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item h3 {
+  color: #000000;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
   min-height: 40px;
   padding: 0 25px;
   margin-top: 10px;
@@ -1458,7 +1562,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-button {
   border: 3px solid transparent;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -1515,6 +1619,7 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -1589,36 +1694,38 @@ input[type="radio"].visually-hidden {
 .compare-button {
   text-indent: -9999px;
   display: block;
-  width: 11px;
-  height: 10px;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: 0 0;
-  border: none;
 }
 
 .compare-up-button {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23c5c5c5' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5.5px 10px 5.5px;
+  border-color: transparent transparent #c5c5c5 transparent;
 }
 
 .compare-up-button:hover {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23231F20' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+  border-color: transparent transparent #23231f transparent;
 }
 
 .compare-up-button:active {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23ee3643' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+  border-color: transparent transparent #ee3643 transparent;
 }
 
 .compare-down-button {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23c5c5c5' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5.5px 0 5.5px;
+  border-color: #c5c5c5 transparent transparent transparent;
 }
 
 .compare-down-button:hover {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23231F20' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
+  border-color: #23231f transparent transparent transparent;
 }
 
 .compare-down-button:active {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23ee3643' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
+  border-color: #ee3643 transparent transparent transparent;
 }
 
 .filters {
@@ -1636,6 +1743,7 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   line-height: 18px;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .filter fieldset {
@@ -1688,7 +1796,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-range .bar {
-  width: 70%;
+  width: 76%;
+  margin-left: 9%;
   height: 2px;
   background: #00ca74;
 }
@@ -1724,15 +1833,24 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.filter-price:first-child {
   position: relative;
 }
 
-.filter-prices::before {
-  content: '\2013';
+.filter-price:first-child::before {
+  content: '';
   position: absolute;
-  top: 8px;
-  left: 106px;
-  color: #444444;
+  top: 19px;
+  left: 105px;
+  width: 10px;
+  height: 1px;
+  background-color: #444444;
+}
+
+.filter-price label {
+  display: none;
 }
 
 .filter-price input {
@@ -1856,6 +1974,11 @@ input[type="radio"].visually-hidden {
 }
 
 .description h2 {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  color: #32425c;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -1991,6 +2114,12 @@ input[type="radio"].visually-hidden {
   color: #fff;
 }
 
+.pagination-item-next a {
+  text-transform: uppercase;
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
 .pagination-list .pagination-item-current:hover a {
   color: #fff;
 }
@@ -2019,7 +2148,7 @@ input[type="radio"].visually-hidden {
 
 .page-header h1 {
   color: #32425c;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -2080,7 +2209,6 @@ input[type="radio"].visually-hidden {
 .modal-write {
   border-top: 7px solid #ff5357;
   width: 620px;
-  padding: 43px 80px;
   top: 120px;
   left: 50%;
   display: none;
@@ -2089,10 +2217,14 @@ input[type="radio"].visually-hidden {
 
 .write-form label {
   font-size: 18px;
-  font-family: Cuprum, 'Trebuchet MS', sans-serif;
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
   color: #000;
   margin-bottom: 7px;
   display: block;
+}
+
+.write-form textarea {
+  min-height: 110px;
 }
 
 .write-form input[type="text"],
@@ -2102,7 +2234,7 @@ input[type="radio"].visually-hidden {
   color: #000000;
   width: 100%;
   padding: 5px 15px;
-  background-color: #f9f6f3;
+  background-color: #ffffff;
   border: 2px solid #dee3e4;
   border-radius: 2px;
   font-size: 13px;
@@ -2111,11 +2243,33 @@ input[type="radio"].visually-hidden {
 .write-form input[type="text"],
 .write-form input[type="email"] {
   width: 220px;
+  height: 38px;
+}
+
+.write-form input[type="text"]:hover,
+.write-form input[type="email"]:hover,
+.write-form textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.write-form input[type="text"]:focus,
+.write-form input[type="email"]:focus,
+.write-form textarea:focus {
+  border-color: #ee3643;
+  outline: none;
+}
+
+.modal-body {
+  padding: 43px 80px 17px;
+}
+
+.modal-footer {
+  padding: 35px 80px;
+  background-color: #f1f1f1;
 }
 
 .write-form button[type="submit"] {
   width: 100%;
-  margin-top: 50px;
 }
 
 .write-form p {
@@ -2166,6 +2320,11 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-cart h2 {
+  font-family: "Cuprum", "Trebuchet MS", sans-serif;
+  color: #32425c;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
   text-transform: none;
   padding-left: 50px;
   background-image: url("../img/icon-mark.svg");

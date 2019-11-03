@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,9 @@
     href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i%7CPT+Sans:400,700&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="inner-page">
   <header class="main-header">
     <div class="header-top">
@@ -18,7 +20,7 @@
         <a class="logo" href="index.html">
           <img src="img/logo.svg" width="109" height="19" alt="Логотип компании «Техномарт»">
         </a>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
           <label class="visually-hidden" for="search-user-query">Поле поиска:</label>
           <input name="user-query" id="search-user-query" type="text" placeholder="Поиск">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
@@ -36,18 +38,22 @@
     <div class="header-inner">
       <div class="container">
         <div class="header-info">
-          <p class="header-text">Интернет-магазин<br>
-            строительных материалов<br>
+          <p class="header-text">Интернет-магазин
+            строительных материалов
             и инструментов для ремонта</p>
           <div class="header-contacts">
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
             <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
           <ul class="user-navigation">
-            <li class="logout-link"><a href="#">Равшан Джамшутович</a>
+            <li>
+              <span class="user-navigation-group">
+                <a class="profile-link" href="profile.html">Равшан Джамшутович</a>
+                <a class="logout-link" href="logout.html">Выйти</a>
+              </span>
               <ul class="user-subnavigation">
                 <li class="order-link"><a href="#">Мои заказы</a></li>
-                <li class="profile-link"><a href="#">Личный кабинет</a></li>
+                <li class="personal-link"><a href="#">Личный кабинет</a></li>
               </ul>
             </li>
           </ul>
@@ -85,7 +91,7 @@
               <legend>Цена:</legend>
               <div class="filter-range">
                 <div class="scale">
-                  <div class="bar" style="margin-left: 9%;width: 76%;"></div>
+                  <div class="bar"></div>
                 </div>
                 <button type="button" class="range-button range-min-button">Минимальная цена</button>
                 <button type="button" class="range-button range-max-button">Максимальная цена</button>
@@ -139,16 +145,16 @@
             <h2>Сортировка:</h2>
             <form class="sort" action="https://echo.htmlacademy.ru" method="get">
               <div class="sort-list">
-                <div class="sort-option"><button class="sort-button sort-button-current" type="button">По цене</button></div>
-                <div class="sort-option"><button class="sort-button" type="button">По типу</button></div>
-                <div class="sort-option"><button class="sort-button" type="button">По функционалу</button></div>
+                <div class="sort-option"><a href="#" class="sort-button sort-button-current">По цене</a></div>
+                <div class="sort-option"><a href="#" class="sort-button">По типу</a></div>
+                <div class="sort-option"><a href="#" class="sort-button">По функционалу</a></div>
               </div>
               <div class="compare-list">
-                <div class="compare-option"><button class="compare-button compare-up-button" type="button">По
+                <div class="compare-option"><a href="#" class="compare-button compare-up-button">По
                     возрастанию
-                    цены</button></div>
-                <div class="compare-option"><button class="compare-button compare-down-button" type="button">По убыванию
-                    цены</button></div>
+                    цены</a></div>
+                <div class="compare-option"><a href="#" class="compare-button compare-down-button">По убыванию
+                    цены</a></div>
               </div>
             </form>
           </section>
@@ -333,7 +339,7 @@
               <li class="pagination-item pagination-item-current"><a>1</a></li>
               <li class="pagination-item"><a href="#">2</a></li>
               <li class="pagination-item"><a href="#">3</a></li>
-              <li class="pagination-item"><a href="#">Следующая</a></li>
+              <li class="pagination-item pagination-item-next"><a href="#">Следующая</a></li>
             </ul>
           </section>
         </div>
@@ -354,10 +360,8 @@
     <div class="footer-top">
       <div class="container">
         <div class="footer-wrapper">
-          <p class="footer-image">
-            <a class="footer-logo" href="index.html"><img src="img/logo.svg" width="138" height="23"
-                alt="Логотип компании «Техномарт»"></a>
-          </p>
+          <a class="footer-logo" href="index.html"><img src="img/logo-technomart.svg" width="137" height="22"
+              alt="Логотип компании «Техномарт»"></a>
           <ul class="footer-nav">
             <li><a href="catalog.html">Компания</a></li>
             <li><a href="#">Новости</a></li>
@@ -367,8 +371,8 @@
           </ul>
         </div>
         <div class="footer-wrapper">
-          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-            +7 (812) 555-05-55</p>
+          <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            <a href="tel:+78125550555"> +7 (812) 555-05-55</a></p>
           <ul class="footer-menu">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
@@ -380,7 +384,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>
+        <p class="footer-copyright">© 2010–2019 Компания «Техномарт»
           Все права защищены</p>
         <ul class="footer-social">
           <li>
@@ -399,11 +403,11 @@
             </a>
           </li>
         </ul>
-        <p class="footer-mail">Обратная связь:<br>
+        <p class="footer-mail">Обратная связь:
           <a href="#">mail@htmlacademy.ru</a>
         </p>
         <p class="footer-develop">
-          Разработано:<br>
+          Разработано:
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
@@ -419,4 +423,5 @@
   </section>
   <script src="js/script.min.js"></script>
 </body>
+
 </html>
