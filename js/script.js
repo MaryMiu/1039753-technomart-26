@@ -1,10 +1,3 @@
-var login = document.querySelector(".js-login-link");
-
-if (login) {
-  login.addEventListener("click", function (evt) {
-    evt.preventDefault();
-  });
-}
 
 var link = document.querySelector(".write-button");
 var popup = document.querySelector(".modal-write");
